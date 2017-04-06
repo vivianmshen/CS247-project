@@ -1,0 +1,515 @@
+body {
+	background-image:url('http://www.zurb.com/playground/images/playground/wood-bg.jpg');
+}
+
+#calibration {
+	display:none;
+}
+
+.selection-start {
+    background: -webkit-radial-gradient(#36dac9, #36dac9, #a2f6ed, #a2f6ed) !important;
+	background: -moz-radial-gradient(#36dac9, #36dac9, #a2f6ed, #a2f6ed) !important;
+	background: -o-radial-gradient(#36dac9, #36dac9, #a2f6ed, #a2f6ed) !important;
+	background: -ms-radial-gradient(#36dac9, #36dac9, #a2f6ed, #a2f6ed) !important;
+	background: radial-gradient(#36dac9, #36dac9, #a2f6ed, #a2f6ed) !important;
+    background-position: center center !important;
+    -webkit-background-size: 100% 100% !important;
+	-moz-background-size: 100% 100% !important;
+	background-size: 100% 100% !important;
+	-webkit-transition: all .4s linear !important;
+	-moz-transition: all .4s linear !important;
+	-o-transition: all .4s linear !important;
+	-ms-transition: all .4s linear !important;
+	transition: all .4s linear !important;
+}
+
+#correctSound {
+	display:none;
+}
+
+#wrongSound {
+	display:none;
+}
+
+.selection-start .selection-end {
+	-webkit-background-size: 200% 300%;
+	-moz-background-size: 200% 300%;
+	background-size: 200% 300%;
+}
+
+.background {
+	max-width: 50%;
+	width: 50%;
+}
+
+.textBlurb {
+	display: none;
+	font-size: 20px;
+	border: white;
+	text-align: center;
+	border-style: solid;
+	background-color: gray;
+	opacity: 0.95;
+	color: white;
+	font-style: bold;
+	padding: 20px;
+	position: absolute;
+	top: 286px;
+	left: 400px;
+	width: 400px;
+}
+
+.blurbContainer {
+	border: white;
+	text-align: center;
+	border-style: solid;
+	margin-top: 20px;
+	margin: 0 auto;
+	background-color: gray;
+	opacity: 0.7;
+	color: white;
+	font-style: bold;
+	padding: 20px;
+	position: relative;	
+	display: none;
+	width: 300px;
+}
+
+#pagination {
+    text-align: center;
+}
+
+#pagination ol {
+    margin: 0;
+    padding: 10px;
+    list-style-type: none;
+}
+#pagination ol li {
+    display: inline;
+}
+
+#pagination span {
+    background-color: white;
+    height: 9px;
+    width: 9px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.circleArrowInit {
+	height: 200px;
+	margin: 30px;
+	margin-top: 200px;
+	margin-bottom: 100px;
+}
+
+.circleArrow {
+	height: 45px;
+	margin-right: 20px;
+	margin-left: 20px;
+	height: 55px;
+}
+
+#pagination span.current {
+    background: #0065FF;
+}
+
+.arrow {
+	display: none;
+}
+
+.boxContainer {
+	border-top: 2px solid white;
+	border-bottom: 2px solid white;
+	text-align: center;
+	margin-top: 10px;
+	background-color: #0065FF;
+	background-color: gray;
+	color: white;
+	font-style: bold;
+	font-size: 30px;
+	line-height: 30px;
+	padding: 20px;
+	position: relative;
+}
+
+.answerBoxContainer {
+	display: none;
+	text-align: center;
+}
+
+.answerBox {
+	background-color: #0066FF;
+	border: 2px solid white;
+	color: white;
+	font-style: bold;
+	font-size: 20px;
+	line-height: 30px;
+	padding: 20px;
+	position: absolute;
+	top: 50px;
+	width: 100%;
+}
+
+#animalLandingPage {
+	text-align: center;
+}
+
+#animalTitle {
+	font-size: 100px;
+	margin-top: 50px;
+	color: #0065FF;
+	color: white;
+	font-style: bold;
+	font-family: 'Henny Penny', cursive;
+	z-index:10;
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#initialImage {
+	width:40%;
+	z-index:-2;
+	position: relative;
+	-moz-box-shadow: 8px 8px 21px #000;
+	-webkit-box-shadow: 8px 8px 21px #000;
+	box-shadow: 8px 8px 21px #000;
+	border-radius: 6%;
+
+}
+
+.bingPhoto {
+	width: 1280px;
+}
+
+.bingContainer {
+	width: 100%;
+	position: relative;
+}
+
+.bing-choice {
+	border:5px solid white;
+	cursor:pointer;
+	background-color: transparent;
+}
+
+.bing-choice:hover {
+}
+
+#cursor {
+	background-color: red;
+	width: 10px;
+	height: 10px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	z-index: 9999999;
+	position: absolute;
+}
+
+#leopard_size {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#snowLeopard {
+  	width: 1300px;
+  	height: 730px;
+  	text-align: center;
+}
+
+#container {
+	margin:0 auto;
+	width:100%;
+}
+
+.multipleChoice {
+	height: 500px;
+	width: 33.33%;
+	float:left;
+	background-color: gray;
+	padding-bottom:15px;
+	border: 2px solid white;
+	margin: -2px;
+}
+
+#howbig_choiceA {
+    background-image: url('http://i.imgur.com/ZgXbX2h.png'); 
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#howbig_choiceB {
+	background-image: url('http://i.imgur.com/BQyDOp6.png');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#howbig_choiceC {
+	background-image: url('http://i.imgur.com/W8hkcDZ.png');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#stackedCars_choiceA {
+	background-image: url('http://i.imgur.com/Ke6d7fa.png');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#stackedCars_choiceB {
+	background-image: url('http://i.imgur.com/AXnUwfF.png');
+	background-repeat:no-repeat;
+	background-position:center;	
+}
+
+#stackedCars_choiceC {
+	background-image: url('http://i.imgur.com/lbPS4ph.png');
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#leopardFood_choiceA {
+	background-image: url('http://i.imgur.com/QQAh58G.png');
+	background-repeat:no-repeat;
+	background-position:center;	
+}
+
+#leopardFood_choiceB {
+	background-image: url('http://i.imgur.com/R9HEKZH.png');
+	background-repeat:no-repeat;
+	background-position:center;	
+}
+
+#leopardFood_choiceC {
+	background-image: url('http://i.imgur.com/XUz5f2V.png');
+	background-repeat:no-repeat;
+	background-position:center;	
+}
+
+#choiceA, #foodA {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 195px;
+	width: 100%;
+	border: 2px solid white;
+}
+
+#choiceB, #foodB {
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	height: 175px;
+	width: 100%;
+	border: 2px solid white;
+}
+
+#choiceC, #foodC {
+	position: absolute;
+	top: 380px;
+	left: 0px;
+	height: 130px;
+	width: 100%;
+	border: 2px solid white;
+}
+
+#leopardQuote {
+	margin-top: 100px;
+	background: black;
+	padding: 100px;
+	color: white;
+}
+
+#leopardPics li {
+	list-style: none;
+	float: left;
+	margin: 40px;
+	margin-top: 10px;
+	width: 330px;
+}
+
+.leopardPic {
+	-moz-box-shadow: 8px 8px 21px #000;
+	-webkit-box-shadow: 8px 8px 21px #000;
+	box-shadow: 8px 8px 21px #000;
+	padding: 8px;
+	border-radius: 50%;
+	height: 230px;
+	width: 315px;
+	background: white;
+	overflow: hidden;
+}
+
+#leopardVid {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#leopardFood {
+	text-align: center;
+}
+
+#jumpA {
+	position: absolute;
+	top: 0px;
+	left: 250px;
+	height: 500px;
+	width: 245px;
+	border:2px solid white;
+}
+
+#jumpB {
+	position: absolute;
+	top: 0px;
+	left: 500px;
+	height: 500px;
+	width: 245px;
+	border:2px solid white;
+}
+
+#jumpC {
+	position: absolute;
+	top: 0px;
+	left: 750px;
+	height: 500px;
+	width: 245px;
+	border:2px solid white;
+}
+
+.multChoice {
+	height: 480px;
+}
+
+.picture {
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	-moz-box-shadow: 8px 8px 21px #000;
+	-webkit-box-shadow: 8px 8px 21px #000;
+	box-shadow: 8px 8px 21px #000;
+}
+
+ul.polaroids { 
+	margin: 0 0 18px -30px; 
+}
+
+ul.polaroids li { 
+	display: inline; 
+}
+
+ul.polaroids a { 
+	background: #fff; 
+	display: inline; 
+	float: left; 
+	margin: 0 0 27px 30px; 
+	width: auto; 
+	padding: 10px 10px 15px; 
+	text-align: center; 
+	font-family: "Marker Felt", sans-serif; 
+	text-decoration: none; 
+	color: #333; 
+	font-size: 18px; 
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25); 
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25); 
+	-webkit-transform: rotate(-2deg); 
+	-webkit-transition: -webkit-transform .15s linear; 
+	-moz-transform: rotate(-2deg);
+}
+
+ul.polaroids img { 
+	display: block; 
+	width: 190px; 
+	margin-bottom: 12px; 
+}
+
+ul.polaroids a:after {
+	content: attr(title);
+}
+
+/* By default, we tilt all our images -2 degrees */
+ul.polaroids a {
+	-webkit-transform: rotate(-2deg);
+	-moz-transform: rotate(-2deg);
+}
+ 
+/* Rotate all even images 2 degrees */
+ul.polaroids li:nth-child(even) a {
+	-webkit-transform: rotate(2deg);
+	-moz-transform: rotate(2deg);
+}
+ 
+/* Don't rotate every third image, but offset its position */
+ul.polaroids li:nth-child(3n) a {
+	-webkit-transform: none;
+	-moz-transform: none;
+	position: relative;
+	top: -5px;
+}
+ 
+/* Rotate every fifth image by 5 degrees and offset it */
+ul.polaroids li:nth-child(5n) a {
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	position: relative;
+	right: 5px;
+}
+ 
+/* Keep default rotate for every eighth, but offset it */
+ul.polaroids li:nth-child(8n) a {
+	position: relative;
+	top: 8px;
+	right: 5px;
+}
+ 
+/* Keep default rotate for every eleventh, but offset it */
+ul.polaroids li:nth-child(11n) a {
+	position: relative;
+	top: 3px;
+	left: -5px;
+}
+
+/* Scale the images on hover, add transitions for smoothing things out, and ensure the hover appears on top */
+ul.polaroids a:hover {
+	-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	position: relative;
+	z-index: 5;
+}
+
+/* Polaroid hover */
+.polaroidHover {
+	-webkit-transform: scale(1.25);
+	-moz-transform: scale(1.25);
+	position: relative;
+	z-index: 5;
+}
+
+/* Add drop shadows and smooth out the transition (Safari only) */
+ul.polaroids a {
+	-webkit-transition: -webkit-transform .15s linear;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+}
+ 
+/* On hover, darken the shadows a bit */
+ul.polaroids a {
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	-moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+}
+
+#topic {
+	display:none;
+}
+
+#animalSlides {
+	display: none;
+}
+
+#children {
+	display:block;
+}
+
+#videoFrame {
+	width:100%;
+	height:100%;
+}

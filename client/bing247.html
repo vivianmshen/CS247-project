@@ -1,0 +1,164 @@
+<head>
+  <title>bing247</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="http://janne.aukia.com/zoomooz/website-assets/website.css" type="text/css" media="screen">
+  <link rel="stylesheet" src="" type="text/css" media="screen">
+  <!-- // <script type="text/javascript" src="/path/to/swfobject.js"></script> -->
+  <link href='http://fonts.googleapis.com/css?family=Henny+Penny' rel='stylesheet' type='text/css'>
+ </head>
+
+<body>
+
+	<div id="children">
+		{{> children}}
+	</div>
+
+	<div id="calibration">
+		{{> calibration}}
+	</div>
+
+	<div id="animalSlides">
+		{{> animalSlides}}
+	</div>
+</body>
+
+<template name="calibration">
+	<div class="boxContainer" id="directions">
+		<img class="circleArrowInit" src="http://i.imgur.com/03irbry.png"/><BR>
+		Trace this circle with your finger to begin! 
+		<!-- <img class="circleArrow" src="http://i.imgur.com/TUMiKv3.png"/> -->
+	</div>
+</template>
+
+<template name="animalSlides">
+	<audio src="correct.mp3" type="audio/mpeg" id="correctSound"></audio>
+	<audio src="wrong.mp3" type="audio/mpeg" id="wrongSound"></audio>
+	<div id="pagination">
+        <ol>
+            <li><span rel="1" id ="page0" class="current"></span></li>
+            <li><span rel="2" id ="page1"></span></li>
+            <li><span rel="3" id ="page2"></span></li>
+            <li><span rel="4" id ="page3"></span></li>
+            <li><span rel="5" id ="page4"></span></li>
+            <li><span rel="6" id ="page5"></span></li>
+            <li><span rel="7" id ="page6"></span></li>
+        </ol>
+    </div>
+    <div id="slide1" class="slide-container" data-index="0" data-pause="false">
+    	<div id="slide1content">
+			<div id="animalLandingPage" class="snowLeopard" data-index="0">
+				<div id="animalTitle">snow leopards</div>
+				<img id="initialImage" src="http://i.imgur.com/D8VQwXu.jpg" alt="" />
+				<div class="boxContainer" id="directions">
+					<img class="circleArrow" src="http://i.imgur.com/03irbry.png"/>
+					Trace circles to the right and left to move through the pages
+					<img class="circleArrow" src="http://i.imgur.com/TUMiKv3.png"/>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div id="slide2" class="slide-container" data-index="1" data-pause="false">
+		<div id="slide2content">
+			<div id="leopardBing" class="snowLeopard" data-index="1">
+				<div class="centerPage">
+					<div class="bingContainer">
+						<img class="bingPhoto" src="http://c3e308.medialib.glogster.com/media/24/247dd0fcaf2cfeb0062344e202c88d0ee368dab4af6de1e17ff1c15ace7d1309/snow-leopard-black-n-white.jpg"/>
+						<div class="textBlurb"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="slide3" class="slide-container" data-index="2" data-pause="true">
+		<div id="slide3content">
+			<div id="leopardPics" class="snowLeopard" data-index="2">
+				<div class="centerPage">
+				<ul> 
+					<li id="pic1" data-closeclick="true" class="pic-container leap-pointable leap-clickable" data-onleappoint="zoomWithLeap"><img class="leopardPic" data-clickable="true" src="http://www.wallpaper77.com/upload/DesktopWallpapers/cache/Snow-Leopard-leopards-1600x900.jpg" /></li>
+					<li id="pic2" data-closeclick="true" class="pic-container leap-pointable leap-clickable" data-onleappoint="zoomWithLeap"><img class="leopardPic" data-clickable="true" src="http://cache.gizmodo.com/assets/images/4/2009/08/Snow-Leopard-Prowl.jpg" /></li>
+					<li id="pic3" data-closeclick="true" class="pic-container leap-pointable leap-clickable" data-onleappoint="zoomWithLeap"><img class="leopardPic" data-clickable="true" src="http://24.media.tumblr.com/tumblr_lv0y7fTTcS1qjhwomo1_1280.jpg"/></li>
+					<li id="pic4" data-closeclick="true" class="pic-container leap-pointable leap-clickable" data-onleappoint="zoomWithLeap"><img class="leopardPic" data-clickable="true" src="http://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Snow_Leopard_-Taronga_Zoo-8a.jpg/800px-Snow_Leopard_-Taronga_Zoo-8a.jpg" /></li>
+					<li id="pic5" data-closeclick="true" class="pic-container leap-pointable leap-clickable" data-onleappoint="zoomWithLeap"><img class="leopardPic" data-clickable="true" src="http://1.bp.blogspot.com/-VV4BlnVeHyg/TfvC8nkJgCI/AAAAAAAAAks/KGx_W5VsHm0/s1600/baby-snow-leopard-zoom.jpg"/></li>
+					<li id="pic6" data-closeclick="true" class="pic-container leap-pointable leap-clickable" data-onleappoint="zoomWithLeap"><img class="leopardPic" data-clickable="true" src="http://wallpapersus.com/wp-content/uploads/2012/10/Snow-Leopard-Flying.jpg"/></li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="slide4" class="slide-container" data-index="3" data-pause="false">
+		<div id="slide4content">
+			<div id="leopardVid" class="snowLeopard" style="font-family: Arial;border: 0 none;" data-index="3">
+				<!-- <button type="button" onclick="playYTVideo()"></button> -->
+				<!-- <iframe src="http://www.stanford.edu/~fguzman1/cgi-bin/youtube/" id="videoFrame"></iframe> -->
+				<div style="text-align:center"> 
+				  <video id="video1" width="840">
+				    <source src="leopard_cub.mp4" type="video/mp4">
+				    Your browser does not support HTML5 video.
+				  </video>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<div id="slide5" class="slide-container" data-index="4" data-pause="true">
+		<div id="slide5content">
+			<div id="leopardFood" class="snowLeopard quiz" data-index="4" data-pause="true">
+				<div class="boxContainer">How many burgers worth of meat does a snow leopard eat everyday?</div>
+				<div class="answerBoxContainer">
+					<div class="answerBox" id="rightAnsBurger">Correct! Snow leopards eat about 5-6 pounds of meat per day.</div>
+					<div class="answerBox" id="wrongAnsBurger">Oops :( Try again!</div>
+				</div>
+				<div class="container">
+					<div id="leopardFood_choiceA" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz" data-sound="wrongSound" data-correct="false" data-answerid="Burger"></div>
+					<div id="leopardFood_choiceB" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz" data-sound="wrongSound" data-correct="false" data-answerid="Burger"></div>
+					<div id="leopardFood_choiceC" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz" data-sound="correctSound" data-correct="true" data-answerid="Burger"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="slide6" class="slide-container" data-index="5" data-pause="true">
+		<div id="slide6content">
+			<div id="leopardJump" class="snowLeopard quiz" data-index="5">
+				<div class="boxContainer">How many stacked cars can a snow leopard jump over?</div>
+				<div class="answerBoxContainer">
+					<div class="answerBox" id="rightAnsJump">Correct! Snow leopards can jump up to 50 feet in the air. That is about 10 cars stacked together!</div>
+					<div class="answerBox" id="wrongAnsJump">Oops :( Try again!</div>
+				</div>
+				<div class="container">
+					<div id="stackedCars_choiceA" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz" data-sound="correctSound" data-correct="true" data-answerid="Jump"></div>
+					<div id="stackedCars_choiceB" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz" data-sound="wrongSound" data-correct="false" data-answerid="Jump"></div>
+					<div id="stackedCars_choiceC" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz" data-sound="wrongSound" data-correct="false" data-answerid="Jump"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="slide7" class="slide-container" data-index="6" data-pause="true">
+		<div id="slide7content">
+			<div id="leopardFacts" class="snowLeopard quiz" data-index="6">
+				<div class="boxContainer">How big do you think a snow leopard is compared to you?</div>
+				<div class="answerBoxContainer">
+					<div class="answerBox" id="rightAnsBig">Correct! A snow leopard is about the same height as you!</div>
+					<div class="answerBox" id="wrongAnsBig">Oops :( Try again!</div>
+				</div>
+				<div class="container">
+					<div id="howbig_choiceA" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz"  data-sound="wrongSound" data-correct="false" data-answerid="Big"></div>
+					<div id="howbig_choiceB" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz"  data-sound="correctSound" data-correct="true" data-answerid="Big"></div>
+					<div id="howbig_choiceC" class="multipleChoice leap-pointable" data-selectable="true" data-onleappoint="handleLeapQuiz"  data-sound="wrongSound" data-correct="false" data-answerid="Big"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="children">
+	<div class="boxContainer">Point to your picture to log in!</div>
+	<div id="kids">
+	    {{#polaroidList children}}
+	    	<div class="kidwrapper leap-clickable" data-clickable="true">
+				<a class="things leap-pointable" title="{{full_name}}" data-clickable="true" data-onleappoint="clickWithLeap">
+					<img class="kidImage" src="{{profile.URL}}" data-clickable="true"/>
+				</a>
+			</div>
+		{{/polaroidList}}
+	</div>
+</template>

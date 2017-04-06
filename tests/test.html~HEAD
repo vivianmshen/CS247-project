@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Testing</title>
+
+    <script src="leap.js"></script>
+
+    <script>
+        function chooseLinkByFingerCount() {
+            if (lastFingerCount == 1) window.document.location.href = 'http://www.google.com';
+            if (lastFingerCount == 2) window.document.location.href = 'http://www.yahoo.com';
+            if (lastFingerCount == 3) window.document.location.href = 'http://www.facebook.com';
+            if (lastFingerCount == 4) window.document.location.href = 'http://www.amazon.com';
+        }
+
+        var lastFingerCount = 0
+        var selectionTimeout = -1;
+        Leap.loop(function (frame) {
+            latestFrame = frame
+            document.getElementById('uiFingerCount').innerHTML = lastFingerCount;
+            if (latestFrame.fingers.length != lastFingerCount) {
+                lastFingerCount = frame.fingers.length;
+                document.getElementById('uiFingerCount').innerHTML = lastFingerCount.toString();
+                if (selectionTimeout > -1) window.clearTimeout(selectionTimeout);
+                selectionTimeout = window.setTimeout(chooseLinkByFingerCount, 1000);
+            }
+        });
+    </script>
+</head>
+<body>
+    <h2>Testing</h2>
+    <div>Hold up fingers to choose a menu item.</div>
+    <canvas id="canvas"></canvas>
+    <div id="uiFingerCount">0</div>
+    <div id="test2">test</div>
+    <ul>
+        <li>1) <a href="http://www.google.com">Google</a></li>
+        <li>2) <a href="http://www.yahoo.com">Yahoo</a></li>
+        <li>3) <a href="http://www.facebook.com">Facebook</a> </li>
+        <li>4) <a href="http://www.amazon.com">Amazon</a></li>
+    </ul>
+
+</body>
+ <script>
+
+    var canvas = document.getElementById('canvas')
+    var context = canvas.getContext("2d")
+    Leap.loop(function (frame) {
+        var handIds = {};
+        if (frame.hands === undefined ) { 
+            var handsLength = 0 
+        } else {
+            var handsLength = frame.pointables.length;
+        }
+        for (var handId = 0, handCount = handsLength; handId != handCount; handId++) {
+            var hand = frame.pointables[handId];
+            var region = new Leap.UI.Region([-100, 100, -100], [100, 300, 100])
+            document.getElementById('test2').innerHTML = hand.tipPosition;
+            var position = region.mapToXY(hand.tipPosition, canvas.width, canvas.height)
+            //context.clearRect(0, 0, canvas.width, canvas.height);
+            context.beginPath();
+            context.arc(position[0], position[1], 10, 0, 2 * Math.PI, false);
+            context.fillStyle = 'green';
+            context.fill();
+            context.lineWidth = 5;
+            context.strokeStyle = '#003300';
+            context.stroke();
+        }
+    });
+    </script>
+</html>

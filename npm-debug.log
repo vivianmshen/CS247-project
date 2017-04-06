@@ -1,0 +1,33 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'uglify-js' ]
+2 info using npm@1.2.11
+3 info using node@v0.8.20
+4 verbose read json /Users/amandalin/Desktop/bing/package.json
+5 verbose read json /Users/amandalin/Desktop/bing/package.json
+6 verbose cache add [ 'uglify-js', null ]
+7 verbose cache add name=undefined spec="uglify-js" args=["uglify-js",null]
+8 verbose parsed url { pathname: 'uglify-js', path: 'uglify-js', href: 'uglify-js' }
+9 silly lockFile d31cae06-uglify-js uglify-js
+10 verbose lock uglify-js /Users/amandalin/.npm/d31cae06-uglify-js.lock
+11 silly lockFile d31cae06-uglify-js uglify-js
+12 verbose addNamed [ 'uglify-js', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile 679a1028-uglify-js uglify-js@
+15 verbose lock uglify-js@ /Users/amandalin/.npm/679a1028-uglify-js.lock
+16 silly lockFile 679a1028-uglify-js uglify-js@
+17 error Error: EACCES, open '/Users/amandalin/.npm/679a1028-uglify-js.lock'
+17 error  { [Error: EACCES, open '/Users/amandalin/.npm/679a1028-uglify-js.lock']
+17 error   errno: 3,
+17 error   code: 'EACCES',
+17 error   path: '/Users/amandalin/.npm/679a1028-uglify-js.lock' }
+18 error Please try running this command again as root/Administrator.
+19 error System Darwin 11.4.2
+20 error command "node" "/usr/local/bin/npm" "install" "uglify-js"
+21 error cwd /Users/amandalin/Desktop/bing
+22 error node -v v0.8.20
+23 error npm -v 1.2.11
+24 error path /Users/amandalin/.npm/679a1028-uglify-js.lock
+25 error code EACCES
+26 error errno 3
+27 error stack Error: EACCES, open '/Users/amandalin/.npm/679a1028-uglify-js.lock'
+28 verbose exit [ 3, true ]
